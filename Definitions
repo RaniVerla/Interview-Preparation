@@ -1,0 +1,118 @@
+Here are some important definition of topics
+
+DESIGN PATTERNS
+Singleton -one instance for class
+prototype -A fully intialized instance to be copied or cloned
+Factory -
+AbstractFactory -
+Dependency Injection -
+Front Controller Pattern -
+Intercepting Filter Pattern
+Observer Pattern -noify sachin's century
+Strategy Pattern
+Decorator Pattern -adding responsiblities at run time ex:pizza base is available we need to add toppings during order
+proxy design pattern -debit card
+Chain of responsiblity- Java exception handling -way of passing the request between a chain of objects (i.e.from method to other 
+in a class)
+Template-Taking care of high levels and leaving the details about sub class ex:Building plan where plan,wiring ,plumbing etc are common
+Data Access Object-
+Singleton can be breaked by reflection i.e private constructors,cloning i.e called as prototype and serialization->by deserializing it
+
+Design Patterns used by Spring Framework
+Singleton Pattern: Creating beans with default scope.
+Factory Pattern: Bean Factory classes
+Prototype Pattern: Bean scopes
+Adapter Pattern: Spring Web and Spring MVC
+Proxy Pattern: Spring Aspect Oriented Programming support
+Template Method Pattern: JdbcTemplate, HibernateTemplate etc
+Front Controller: Spring MVC DispatcherServlet
+Data Access Object: Spring DAO support
+Dependency Injection and Aspect Oriented Programming
+
+SOLID Principles in one line
+S-Single Responsibility Principle- One responsiblity to change --is all about having which do one thing ex:bank class haiving methods
+like savemoney,generate repot and   calculate --it is reusable and class Task with methods as download file,aprse the file,
+persist the data where it can be reused anywhere
+O-Open/closed Principle-Open for extension but closed for modification  --Circle class 
+L-Liskov Substitution principle -using inheritance when it is not needed jsut to save some lines of code--Example Rectangle class
+extending by Square class
+I-Interface Seggregation Principle- Clients should not be forced to implement the interfaces they don't use. Instead of one fat
+interface we can have 
+muliple small interfaces based on methods , each one serving one submodule. Ex:interface animal with feed and groom methods and 
+class Dog implementing animal with food as veg and groom as smooth and tiger class having food as non-veg and groom method as 
+dummy implementation
+D-Dependecy Inversion Pinciple- Dependes on Interfaces or abstract classes rather than concrete classes -Ex:
+
+OOPS Principles
+Class-The class is a group of similar entities. 
+Object -An object can be defined as an instance of a class
+datahididng-
+Encapsulation- Encapsulation is an OOP technique of wrapping the data and code
+abstraction- It is a technique of creating a new data type that is suited for a specific application
+Inheritance- one object acquires the properties and behaviors of the parent object
+Polymorphism-Polymorphism refers to the ability of a variable, object or function to take on multiple forms
+Association-One to One,One to many etc
+Aggregation-all objects have their separate lifecycle. However, there is ownership such that child object can’t belong to another
+parent object
+Composition-Child objects do not have their lifecycle so when parent object deletes all child object will also delete automatically
+
+
+Java Modifiers:
+Transient::By making a variable volatile using the volatile keyword in Java, application programmer ensures that its value is not 
+persistent or saved during the time of serialization
+Volatile:By making a variable volatile using the volatile keyword in Java, application programmer ensures that its value should 
+always be read from main memory and thread should not use cached value of that variable from their own stack.
+
+MultiThreading
+
+1. Countdown Latches
+2. Cyclic Barriers 
+3. Exchangers
+4. Semaphores
+5. Phasers
+6. Atomic Variables
+7. Fork/Join Framework
+
+Definitions:
+Exception:
+An exception is an unwanted or unexpected event, which occurs during the execution of a program i.e at run time, that disrupts the
+normal flow of the program’s instructions.
+
+Why String is Immutable or Final in Java
+The string is Immutable in Java because String objects are cached in String pool. Since cached String literals are shared between
+multiple clients there is always a risk, where one client's action would affect all another client. For example, if one client
+changes the value of String "Test" to "TEST", all other clients will also see that value as explained in the first example. 
+Since caching of String objects was important from performance reason this risk was avoided by making String class Immutable.
+At the same time, String was made final so that no one can compromise invariant of String class e.g. Immutability, Caching, hashcode
+calculation etc by extending and overriding behaviors. Another reason of why String class is immutable could die due to HashMap.
+
+Since Strings are very popular as HashMap key, it's important for them to be immutable so that they can retrieve the value object 
+which was stored in HashMap. Since HashMap works in the principle of hashing, which requires same has value to function properly.
+Mutable String would produce two different hashcodes at the time of insertion and retrieval if contents of String was modified after
+insertion, potentially losing the value object in the map.
+
+Q2)What is responsiblity of Garbage Collector?
+
+Ans) Garbage collector frees the memory occupied by the unreachable objects during the java program by deleting these unreachable 
+objects.It ensures that the available memory will be used efficiently, but does not guarantee that there will be sufficient 
+memory for the program to run.
+
+Q9) What is the purpose of overriding finalize() method?
+Ans) The finalize() method should be overridden for an object to include the clean up code or to dispose of the system resources 
+that should to be done before the object is garbage collected.
+
+****
+All primitive wrapper classes (Integer, Byte, Long, Float, Double, Character, Boolean and Short) are immutable in Java, 
+so operations like addition and subtraction create a new object and not modify the old.
+
+What is the purpose of hashcode?
+The purpose of the hashCode() method is to provide a numeric representation of an object's contents so as to provide an alternate
+mechanism to loosely identify it. By default the hashCode() returns an integer that represents the internal memory address of the 
+object.
+
+Are static final variables are thread-safe?
+There are two types of static final variables, primitive, and reference. Initialization of all static final variables is thread safe
+because it's done in static initializer block. Similarly primitive static final variable is also thread-safe because you cannot modify
+their value once created, but reference static final variable may or may not be thread-safe. If the object to which your final variable 
+is referring is Immutable or thread-safe then it is otherwise not.
+
