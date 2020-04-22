@@ -23,9 +23,10 @@ SpringCore
 SpringMVC
 SpringBoot
 
-ORM
+DATA BASE 
 Hibernate
 JPA Transactions
+JDBC RDBMS 
 
 WEB TOPICS
 Angular
@@ -36,4 +37,29 @@ DESIGN PATTERNS
 Behavioral
 Creational
 Structural
+
+WEBSERVICES
+SOAP
+REST
+
+DATA STRUCTURES
+Arrays
+Linked List
+Trees(Binary Tree, BST,AVL)
+Graph
+stack
+queue
+Trie
+Heap
+Hashing
+
+ALGORITHMS
+Searching
+sorting
+recursion
+divide and conquer
+greedy algo
+dynamic programming
+back tracking
+branch and bound
 
