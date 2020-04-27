@@ -1,0 +1,38 @@
+  Algorithms/Data structures
+
+·         Lists, Arrays, Trees – operations and complexities
+
+·         One sorting algorithm – implementation + complexity
+
+·         One searching algorithm – implementation + complexity
+
+·         Should know when to use what data structure
+
+·         Stack, Queue – operations and complexities
+Java 
+
+·         Collections: Sets, Maps, Lists – operations and complexities
+
+·         Maps: HashMap , should know how to implement a simple one (using two arrays , example), how it works , hash collisions etc.
+
+·         Strings: Operations, complexity , immutability
+
+·         OOP/Generics: Subtype, supertype , what is final , what is static etc.
+
+·         Exceptions: Runtime, compile time, errors, handling
+
+MutliThreading:
+·         Threads : Threadpools, synchronization, what is multithreading, race conditions, volatile ,how to design with thread safety, 
+           maybe pub-sub implementation, locks
+           
+Other Stuff:
+
+·         Any 1 design pattern, where it is used etc. 
+
+·         REST, SOAP : What is the difference, why to use one over another 
+
+·         Authorization v Authentication 
+
+·         Different HTTP status codes , what is client side error, what is server error 
+
+·         JavaScript: What is server side, what is client side, where would you use it.
