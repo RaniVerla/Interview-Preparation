@@ -16,7 +16,7 @@ Java
 ·         Maps: HashMap , should know how to implement a simple one (using two arrays , example), how it works,
           hash collisions etc.
 
-·         Strings: Operations, complexity , immutability
+·         Strings: Operations, complexity , immutability.
 
 ·         OOP/Generics: Subtype, supertype , what is final , what is static etc.
 
