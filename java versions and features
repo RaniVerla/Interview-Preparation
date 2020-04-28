@@ -1,0 +1,68 @@
+Java7-- Year 
+
+1.Diamond Operator enhancements <>
+2.Try with multicatch
+3.try with multiresources
+4.Type Inference
+5.Switch with String
+6.ForkJoin Framework
+
+
+Java8--18th March 2014
+1.forEach() method in Iterable interface
+2.default and static methods in Interfaces
+3.Functional Interfaces and Lambda Expressions
+4.Java Stream API for Bulk Data Operations on Collections
+5.Java Time API
+6.Collection API improvements
+7.Concurrency API improvements
+8.Java IO improvements
+9.Miscellaneous Core API improvements
+
+Java9-- March 2017
+
+1.Java 9 REPL (JShell)
+2.Factory Methods for Immutable List, Set, Map and Map.Entry
+3.Private methods in Interfaces
+4.Java 9 Module System
+5.Process API Improvements
+6.Try With Resources Improvement
+7.CompletableFuture API Improvements
+8.Diamond Operator for Anonymous Inner Class
+9.Reactive Streams
+10.Optional Class Improvements
+11.Stream API Improvements --takeWhile(), dropWhile(), iterate with 3 arguments 
+12.Enhanced @Deprecated annotation
+13.HTTP 2 Client
+14.Multi-Resolution Image API
+15.Miscellaneous Java 9 Features
+
+
+Java10--March 2018,
+
+1.Local-Variable Type Inference --var number =10;
+
+
+
+Java11--SEPTEMBER 2018,
+
+1.Running Java File with single command
+2.String methods -isBlank(),Strip(),repeat()
+3.Local-Variable Syntax for Lambda Parameters
+4.Nested Based Access Control --private method of the main class is accessible from the above-nested class in the above manner.
+5.Epsilon: A No-Op Garbage Collector
+6.HTTP Client- Asynch with HTTP 2
+
+Java12--March 19, 2019
+
+1.Switch Expression enhancement
+2.Java Strings New Methods – indent(), transform(), describeConstable(), and resolveConstantDesc().
+3.Raw String Literals is Removed From JDK 12.
+
+
+Java13--17th SEPTEMBER 2019
+
+1.Text blocks
+2.switch Expressions
+
+Java 14-March 12,2020
