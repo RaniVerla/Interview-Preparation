@@ -1,0 +1,14 @@
+*** What happens when a prototype bean is injected into a singleton bean?
+Injection happens only once when the Spring context is started. If the bean has prototype scope,
+Spring will create new prototype bean for every injection. 
+But prototype bean will not be created every time you call its methods or access it from singleton bean.
+
+What is CorrelationId
+
+What is CQRS 
+
+What is Actuator,Hystrix
+
+How do you build resilient Microservices?
+To make microservices resilient, the developers have to apply numerous resiliency patterns such as timeout, retry, 
+circuit breaker, fail-fast, bulkhead, transactions, and failover/load balancing.
