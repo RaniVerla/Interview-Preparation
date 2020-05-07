@@ -1,0 +1,208 @@
+Spring Framework
+@ByName
+@ByType
+@Autowired
+@Qualifier
+@Value
+@Required
+Stereotype Annotations
+@Component
+@Controller
+@Service
+@Repository
+@PostConstruct
+@PreDestroy
+@Configuration
+@Bean
+@ComponentScan
+@Lazy
+@primary
+
+
+Spring MVC and REST Annotations
+@Controller
+@ResponseBody
+@RequestMapping
+@CookieValue
+@CrossOrigin
+@RestController
+@GetMapping
+@PostMapping
+@PutMapping
+@PatchMapping
+@DeleteMapping
+@PathVariable:- 
+@ExceptionHandler
+@ControllerAdvice
+@ExceptionHandler, @InitBinder and @ModelAttribute
+@Mappings and @Mapping
+@MatrixVariable
+@RequestParam
+@RequestAttribute
+@RequestBody
+@RequestHeader
+@RequestPart
+@ResponseStatus
+@RestController
+@RestControllerAdvice
+@SessionAttribute
+@SessionAttributes
+@ModelAttribute 
+@EnableWebMvc
+@valid
+
+@CrossOrigin
+Cross-origin resource sharing (CORS) is a W3C specification implemented by most browsers that allows you to specify in a flexible way what kind of cross domain requests are authorized, instead of using some less secured and less powerful hacks like IFrame or JSONP.
+
+
+@Component auto detects and configures the beans using classpath scanning whereas @Bean explicitly declares a single bean, rather than letting Spring do it automatically.
+@Component does not decouple the declaration of the bean from the class definition where as @Bean decouples the declaration of the bean from the class definition.
+@Component is a class level annotation where as @Bean is a method level annotation and name of the method serves as the bean name.
+@Component need not to be used with the @Configuration annotation where as @Bean annotation has to be used within the class which is annotated with @Configuration.
+We cannot create a bean of a class using @Component, if the class is outside spring container whereas we can create a bean of a class using @Bean even if the class is present outside the spring container.
+@Component has different specializations like @Controller, @Repository and @Service whereas @Bean has no specializations.
+
+
+
+Spring Boot Annotations
+@EnableAutoConfiguration
+@SpringBootApplication
+@ComponentScan
+@EnableAutoConfiguration
+@Configuration
+@RequestHeader(name="Accept-Language", required=false) Locale locale
+
+Using generated security password: b61e6e02-c7fa-4dfe-84ce-4d3127661f88
+
+
+Internaionalization i18N
+
+
+Spring Cloud Annotations
+@EnableConfigServer
+@EnableEurekaServer
+@EnableDiscoveryClient
+@EnableCircuitBreaker
+@HystrixCommand
+
+Spring Framework DataAccess Annotations
+@Transactional
+
+
+Cache-Based Annotations
+@Cacheable
+@CachePut
+@CacheEvict
+@CacheConfig
+
+Spring Framework Testing Annotations
+@BootstrapWith
+@ContextConfiguration
+@WebAppConfiguration
+@Timed
+@Repeat
+@Commit
+@RollBack
+@DirtiesContext
+@BeforeTransaction
+@AfterTransaction
+@Sql
+@SqlConfig
+@SqlGroup
+@SpringBootTest
+@DataJpaTest
+@DataMongoTest
+@WebMVCTest
+@AutoConfigureMockMVC
+@MockBean
+@JsonTest
+@TestPropertySource
+
+JPA Annotations-Hibernate Annotations
+
+@Entity
+javax.persistence.Entity: Specifies that the class is an entity. This annotation can be applied on Class, Interface of Enums.
+
+@Table: It specifies the table in the database with which this entity is mapped. In the example below the data will be stores in the “employee” table. Name attribute of @Table annotation is used to specify the table name.
+
+@Id: This annotation specifies the primary key of the entity.
+
+@GeneratedValue: This annotation specifies the generation strategies for the values of primary keys.
+
+@Column: Specify the column mapping using @Column annotation. Name attribute of this annotation is used for specifying the table’s column name.
+
+@Version: We can control versioning or concurrency using this annotation.
+
+@OrderBy: Sort your data using @OrderBy annotation. In example below, it will sort all employees_address by their id in ascending order.
+
+@Transient: Every non static and non-transient property of an entity is considered persistent, unless you annotate it as @Transient.
+
+@Lob: Large objects are declared with @Lob 
+
+Sample code:
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employee")
+public class Employee implements Serializable {
+
+  @Id
+  @Column(name = "id")
+  @GeneratedValue(strategy=SEQUENCE, generator="ID_SEQ")
+  private int id;
+
+  @Column(name = "employee_name")
+  private String employeeName;
+  
+  @Version
+  @Column(name = "version")
+  private Date version;
+  
+  @OrderBy("id asc")
+  private Set employee_address;
+  
+  @Transient
+  Private int employeePhone;
+  
+  @Lob
+	public String getEmployeeAddress() {
+    return employeeAddress;
+	}
+}
+
+
+
+@OneToOne
+Employee and EmployeeDetail entities share the same primary key and we can associate them using @OneToOne and @PrimaryKeyJoinColumn.
+
+@PrimaryKeyJoinColumn :This annotation is used to associate entities sharing the same primary key.
+
+@JoinColumn annotation is used for one-to-one or many-to-one associations when foreign key is held by one of the entities.s.
+
+@MapsId: Two entities with shared key can be persisted using @MapsId annotation.
+
+@ManyToOne
+Many employees can share the same status. So, employee to employeeStatus is a many to one relation. @ManyToOne annotation can be used for the same
+
+@OneToMany
+Employee to Communication will be a one-to-many relationship. The owner of this relationship is Communication so, we will use ‘mappedBy’ attribute in Employee to make it bi-directional relationship.
+
+@JoinTable: @JoinTable and mappedBy should be used for entities linked through an association table.
+
+@Entity
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="cartype", discriminatorType=DiscriminatorType.STRING )
+ 
+@DiscriminatorValue("Car")
+public class Car {  }
+ 
+@Entity
+@DiscriminatorValue("BMW")
+public class BMW extends Car {  }
+
+
+
+
+
